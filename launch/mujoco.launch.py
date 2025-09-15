@@ -68,7 +68,6 @@ def generate_temp_config(config_path, package_name, kv_pairs):
 # --------------------------
 def control_spawner(names, inactive=False):
     args = list(names)
-    args += ['--param-file', LaunchConfiguration('controllers_yaml')]
     if inactive:
         args.append('--inactive')
     return Node(
